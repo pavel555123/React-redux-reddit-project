@@ -14,7 +14,6 @@ export function useUserData() {
 
     useEffect(() => {
         if (!token) return;
-        console.log(token)
         dispatch(meRequestAsync());
     }, [token])
 

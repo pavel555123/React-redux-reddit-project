@@ -58,6 +58,7 @@ export const meRequestAsync = (): ThunkAction<void, RootState, unknown, Action<s
         .catch((error) => {
             console.log(error);
             dispatch(meRequestError(String(error)));
+            localStorage.removeItem('token');
         })
 }
 

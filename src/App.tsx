@@ -24,9 +24,11 @@ function AppComponent() {
     //     setMounted(true)
     // }, [])
     useEffect(() => {
-        const token = window.__token__;
-// console.log(token, window.__token__)
+        const token = localStorage.getItem('token') || window.__token__;
         store.dispatch(setToken(token));
+        if (token) {
+            localStorage.setItem('token', token);
+        }
     }, []);
     // const [token, setToken] = useState('');
 
