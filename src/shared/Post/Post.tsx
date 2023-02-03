@@ -1,8 +1,8 @@
-import React, {useEffect, useRef} from 'react';
+import {useEffect, useRef} from 'react';
 import styles from './post.css';
 import {createPortal} from "react-dom";
-import {CommentForm} from "../CommentForm";
 import {useNavigate} from "react-router-dom";
+import {CommentFormContainer} from "../CommentFormContainer";
 
 export function Post() {
     const ref = useRef<HTMLDivElement>(null);
@@ -32,7 +32,7 @@ export function Post() {
                 <p>43r34ffe</p>
                 <p>f345yg4g5</p>
                 <p>23er453</p>
-                <CommentForm/>
+                <CommentFormContainer/>
             </div>
         </div>
     ), node);

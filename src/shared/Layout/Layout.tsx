@@ -1,8 +1,8 @@
-import React from 'react';
 import styles from './layout.css';
+import {ReactNode} from "react";
 
 interface ILayoutProps {
-    children?: React.ReactNode
+    children?: ReactNode
 }
 
 export function Layout({children}: ILayoutProps) {

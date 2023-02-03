@@ -1,4 +1,3 @@
-import React from 'react';
 import {MenuIcon} from "./MenuIcon";
 
 export enum EIcons {
@@ -7,7 +6,6 @@ export enum EIcons {
 
 const result = {
     [EIcons.menu]: <MenuIcon/>,
-    // [resultKeys.success]: <StyleDiv>success</StyleDiv>,
 };
 
 interface IIconProps {

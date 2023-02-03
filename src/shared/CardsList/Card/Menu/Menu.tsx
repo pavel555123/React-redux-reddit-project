@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "../card.css";
 import {MenuIcon} from "../../../Icons";
 import {Dropdown} from "../Dropdown";

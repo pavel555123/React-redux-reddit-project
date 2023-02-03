@@ -1,5 +1,3 @@
-import React from 'react';
-
 export function MenuIcon() {
     return (
         <svg width="16px" height="16px" viewBox="0 0 16 16" className="bi bi-three-dots-vertical"

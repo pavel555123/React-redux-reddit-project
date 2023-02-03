@@ -1,4 +1,3 @@
-import React from 'react';
 import {SearchBlock} from "./SearchBlock";
 import {ThreadTitle} from "./ThreadTitle";
 import {SortBlock} from "./SortBlock";

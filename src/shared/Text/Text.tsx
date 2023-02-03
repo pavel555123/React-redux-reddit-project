@@ -1,13 +1,10 @@
-import React from 'react';
 import styles from './text.css';
 import classnames from 'classnames';
 
 export enum EColor {
     black = 'black',
-    orange = 'orange',
     green = 'green',
     white = 'white',
-    grayF4 = 'grayF4'
 }
 
 type TSizes = 28 | 20 | 16 | 14 | 12 | 10;
