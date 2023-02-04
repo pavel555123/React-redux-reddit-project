@@ -8,10 +8,9 @@ interface Props {
 export function Title({title}: Props) {
     return (
         <h2 className={styles.title}>
-            {title}
-            {/*<Link to="/posts/1" className={styles.postLink}>*/}
-            {/*    {title}*/}
-            {/*</Link>*/}
+            <Link to="/posts/1" className={styles.postLink}>
+                {title}
+            </Link>
         </h2>
     );
 }

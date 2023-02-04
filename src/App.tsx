@@ -4,7 +4,6 @@ import {Layout} from "./shared/Layout";
 import {Header} from "./shared/Header";
 import {Content} from "./shared/Content";
 import {CardsList} from "./shared/CardsList";
-// import {tokenContext} from "./shared/context/tokenContext";
 
 import {applyMiddleware, createStore} from "redux";
 import {Provider, useDispatch} from 'react-redux';
@@ -19,10 +18,10 @@ import {useEffect, useState} from "react";
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 function AppComponent() {
-    // const [mounted, setMounted] = useState(false);
-    // useEffect(() => {
-    //     setMounted(true)
-    // }, [])
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => {
+        setMounted(true)
+    }, [])
     useEffect(() => {
         const token = localStorage.getItem('token') || window.__token__;
         store.dispatch(setToken(token));
@@ -30,36 +29,23 @@ function AppComponent() {
             localStorage.setItem('token', token);
         }
     }, []);
-    // const [token, setToken] = useState('');
-
-    // useEffect(() => {
-    //     if (window.__token__) {
-    //         dispatch(setToken(window.__token__))
-    //     }
-    // }, [])
-
-
-    // const [token] = useToken();
-    // const TokenProvider = tokenContext.Provider;
 
     return (
         <Provider store={store}>
-            {/*{mounted && (*/}
-            {/* <BrowserRouter>*/}
-            {/*<TokenProvider value={token}>*/}
-            <Layout>
-                <Header/>
-                <Content>
-                    <CardsList/>
-                    {/*// <Routes>*/}
-                    {/*// <Route path='/' element={<Layout/>}/>*/}
-                    {/*// <Route path='posts/:id' element={<Post/>}/>*/}
-                    {/*// </Routes>*/}
-                </Content>
-            </Layout>
-            {/*</TokenProvider>*/}
-            {/*// </BrowserRouter>*/}
-            {/*)}*/}
+            {mounted && (
+                <BrowserRouter>
+                    <Layout>
+                        <Header/>
+                        <Content>
+                            <CardsList/>
+                            <Routes>
+                                <Route path='/' element={<Layout/>}/>
+                                <Route path='posts/:id' element={<Post/>}/>
+                            </Routes>
+                        </Content>
+                    </Layout>
+                </BrowserRouter>
+            )}
         </Provider>
     );
 }

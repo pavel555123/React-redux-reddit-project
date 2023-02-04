@@ -1,9 +1,12 @@
 .card {
     display: flex;
     flex-flow: row wrap;
-    /*background-color: var(--white);*/
     border-radius: 7px;
     position: relative;
+}
+
+.card:not(:last-child) {
+    margin-bottom: 30px;
 }
 
 .card > *, .textContent > * {
@@ -168,10 +171,6 @@ svg.up {
 }
 
 @media all and (min-width: 1024px) {
-
-    .previewImg {
-        display: none;
-    }
 
     .menuButton {
         align-self: center;

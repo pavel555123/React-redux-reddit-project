@@ -56,7 +56,6 @@ export const meRequestAsync = (): ThunkAction<void, RootState, unknown, Action<s
             dispatch(meRequestSuccess({name: userData.name, iconImg: userData.icon_img.replaceAll('amp;', '')}));
         })
         .catch((error) => {
-            console.log(error);
             dispatch(meRequestError(String(error)));
             localStorage.removeItem('token');
         })
