@@ -28,7 +28,6 @@ export function CardsList() {
                             after: nextAfter
                         }
                     })
-
                 setNextAfter(after);
                 setPosts(prevChildren => prevChildren.concat(...children));
             } catch (error) {
@@ -52,7 +51,7 @@ export function CardsList() {
                 observer.unobserve(bottomOfList.current);
             }
         }
-    }, [bottomOfList.current, nextAfter, token]);
+    }, [nextAfter, token]);
 
     return (
         <ul className={styles.cardsList}>

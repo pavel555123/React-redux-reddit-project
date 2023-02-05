@@ -1,5 +1,6 @@
 import styles from './text.css';
 import classnames from 'classnames';
+import {ReactNode} from "react";
 
 export enum EColor {
     black = 'black',
@@ -11,7 +12,7 @@ type TSizes = 28 | 20 | 16 | 14 | 12 | 10;
 
 interface ITextProps {
     As?: 'span' | 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'div';
-    children?: React.ReactNode;
+    children?: ReactNode;
     size: TSizes;
     mobileSize?: TSizes;
     tabletSize?: TSizes;
